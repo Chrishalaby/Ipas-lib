@@ -1,0 +1,12 @@
+[build]
+  base = "custom-app"
+  command = "cd ../ipas-core-library && npm install && npm run build:lib && cd ../custom-app && npm install && npm run build"
+  publish = "dist/custom-app"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
